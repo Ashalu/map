@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.developer.aashish.diwaliwork.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCurrent"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:text="Current Latitude : "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tvLat"
+        android:textColor="#000"
+        android:layout_below="@+id/tvCurrent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="Lat : "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/valeLat"
+        android:visibility="gone"
+        android:layout_toEndOf="@+id/tvLat"
+        android:layout_below="@+id/tvCurrent"
+        android:layout_height="wrap_content"
+        android:text="28.13525 : "/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tvLang"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_below="@+id/tvLat"
+        android:layout_height="wrap_content"
+        android:text="Lang : "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/valeLang"
+        android:visibility="gone"
+        android:layout_toEndOf="@+id/tvLang"
+        android:layout_below="@+id/valeLat"
+        android:layout_height="wrap_content"
+        android:text="28.13525 : "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="#000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/valeLang"
+        android:id="@+id/addresstext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/address"
+        android:textColor="#000"
+        android:layout_below="@+id/addresstext"
+        android:layout_height="wrap_content"
+        android:text="Destination Address : "/>
+
+    <EditText
+        android:layout_width="180dp"
+        android:id="@+id/etlat"
+        android:layout_below="@+id/address"
+        android:hint="latitude"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:id="@+id/etlang"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/etlat"
+        android:layout_below="@+id/address"
+        android:hint="Longitude"
+        android:layout_height="wrap_content" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Total Distance : "
+    android:layout_marginTop="10dp"
+    android:textColor="#000"
+    android:id="@+id/distance"
+    android:layout_below="@+id/etlang"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:layout_marginTop="10dp"
+        android:id="@+id/valuedistance"
+        android:textColor="#000"
+        android:layout_toEndOf="@id/distance"
+        android:layout_below="@+id/etlang"
+        />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cal"
+    android:layout_marginRight="15dp"
+    android:layout_below="@+id/etlang"
+    android:layout_alignParentRight="true"
+    android:text="Calculate"/>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_marginTop="25dp"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/valuedistance"
+    tools:context="com.developer.aashish.diwaliwork.MapsActivity" />
+</RelativeLayout>
